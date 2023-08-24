@@ -64,7 +64,15 @@ const socket = io('http://localhost:10003/game', {
 socket.emit('readyGame', ());
 ```
 
+<details>
 
+<summary>게임 준비</summary>
+
+* p1이 게임을 시작할 수 있게 게임 준비 요청을 받는 소켓
+* p1에게 startButton 을 띄우고 버튼을 누르게함
+* p1,p2 에게 모두 standby 상태를 보내주기 위함&#x20;
+
+</details>
 
 ### 게임 상태 정보 &#x20;
 
@@ -74,7 +82,18 @@ socket.on('infoGame', (res) => {
 });
 ```
 
+<details>
 
+<summary>게임 상태 정보  </summary>
+
+* 게임 상태를 받는 소켓
+* standby
+  * 게임이 준비되었음을 알려주는 변수
+  * 3초 카운트를 띄우고 게임이 시작할 수 있도록 socket.emit('startGame')보ㅁ
+* end
+  * 게임이 종료 되었음을 알려주는 변수
+
+</details>
 
 ### 게임 시작
 
@@ -82,20 +101,30 @@ socket.on('infoGame', (res) => {
 socket.emit('startGame');
 ```
 
+<details>
 
+<summary>게임 시작</summary>
+
+* 게임 카운트가 끝났다고 알려주는 소켓
+
+</details>
 
 ### 게임 패들 업데이트
 
 ```javascript
-socket.emit('updatePaddle', (res) => {
-	data:{
-		x: ,
-		y:
-	}
+socket.emit('updatePaddle', {
+        paddle: keyDown | keyUp,
+    }
 })
 ```
 
-###
+<details>
+
+<summary>게임 패들 업데이트</summary>
+
+* 패들이 이동함을 전달하는 소켓
+
+</details>
 
 ### 게임 오브젝트 업데이트
 
@@ -118,7 +147,13 @@ socket.on('updateObject', (res) => {
 })
 ```
 
+<details>
 
+<summary>게임 오브젝트 업데이트</summary>
+
+* 게임 오브젝트에 대한 데이터를 보내주는 소켓
+
+</details>
 
 ### 게임 스코어 업데이트
 
@@ -135,4 +170,12 @@ socket.on('updateSocre', (res) => {
 	},
 })
 ```
+
+<details>
+
+<summary>게임 스코어 업데이트</summary>
+
+* 게임 스코어가 변경되었음을 알려주는 소켓
+
+</details>
 
