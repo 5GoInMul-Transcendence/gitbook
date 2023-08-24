@@ -1,7 +1,7 @@
 # 채널 채팅방
 
 {% hint style="info" %}
-서버에서는 채팅방에 유저를 넣어준다.서버에서는 채팅방에 유저를 넣어준다.최근 업데이트 (8.17)
+최근 업데이트 (8.24)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>채팅 페이지</p></figcaption></figure>
@@ -92,7 +92,7 @@
 
 {% swagger method="get" path=" /channel/:channelid" baseUrl=" " summary="채널 입장" %}
 {% swagger-description %}
-
+실패 시 차단은 채팅방에서 ban을 의미한다.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="channelid" type="채널 아이디" required="true" %}
@@ -110,12 +110,12 @@
   "data" : {
     "id": 1,
     "name": '채널 이름',
-    "role": onwer | admin | user,
+    "role": "onwer" | "admin" | "user",
     "env": "public" | "protected" | "private" | "dm",
     "recentMessage": [{
           id: 1,
           nickname: 'jiyokim',
-          content: '최근 메시지'
+          content: '최근 메시지',
     }, ...], 
   },
   "resStatus" :
@@ -135,7 +135,7 @@
   "resStatus" :
   {
     "code"   : "0001"
-    "message": "차단되었습니다."
+    "message": "차단(ban)되었습니다."
   }
 }
 </code></pre>
@@ -257,10 +257,16 @@ socket.on('updateMyChannel', (res)=> {
 ## 채널 확인
 
 * env 프로퍼티 명을 mode로 변경
+* "채널이 존재하지 않습니다." 메시지 추가
 
 ## 채널 비밀번호 인증
 
 * 어떤 유저가 유효한 비밀번호로 인증 되었는지 확인하기 위해 세션 ID가 필요하다.
+* 설명 추가
+
+## 채널 입장
+
+* 실패 시 메시지를 구체적으로 변경
 * 설명 추가
 
 </details>
