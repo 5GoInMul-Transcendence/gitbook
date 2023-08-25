@@ -1,7 +1,3 @@
----
-description: 지
----
-
 # 매치 페이지
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>매치 페이지</p></figcaption></figure>
