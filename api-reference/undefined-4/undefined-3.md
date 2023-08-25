@@ -190,12 +190,16 @@ pubilc일 때와 다르게 protected는 서버에서 채팅방에 유저를 이 
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="delete" path="/channel/:channleid" baseUrl=" " summary="채널 나가기" %}
+{% swagger method="delete" path="/channel/:channelid" baseUrl=" " summary="채널 나가기" %}
 {% swagger-description %}
-채널에 아무도 없으면 채널 삭제
+채널에 아무도 없으면, 서버에서 삭제해야 한다. All, My 채널 리스트의 웹 소켓으로 없어졌다는 신호를 보내면 프론트는 알아서 없앨 수 있나?
 {% endswagger-description %}
 
 {% swagger-parameter in="cookie" name="sessionid" type="세션 ID" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="channelid" type="채널 아이디" required="true" %}
 
 {% endswagger-parameter %}
 
@@ -271,5 +275,10 @@ socket.on('updateMyChannel', (res)=> {
 * 실패 시 메시지를 구체적으로 변경
 * env 프로퍼티 명을 mode로 변경&#x20;
 * 설명 추가
+
+## 채널 나가기
+
+* parameter에 channelid 누락 수정
+* API resource 오타 수정, channleid => channelid
 
 </details>
