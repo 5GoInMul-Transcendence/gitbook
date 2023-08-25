@@ -46,7 +46,9 @@
 
 {% swagger method="post" path="/channel/:channelid/password" baseUrl=" " summary="채널 비밀번호 인증" %}
 {% swagger-description %}
-서버에서는 채팅방에 유저를 넣어준다.
+pubilc일 때와 다르게 protected는 서버에서 채팅방에 유저를 이 때 넣어준다.
+
+이는 서버에 비밀번호를 통해 들어오는 유저가 password 인증을 했을 때 인증된 유저를 따로 저장하지 않기 위해서다. 비밀번호 인증만 하고, 방에 들어오지 않는다 가정한다면 이 때 인증 받은 유저는 메모리 상에 계속 쌓일 것이고, 방에 들어가지 않았기 때문에 지울 방법이 없기 때문이다.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="password" type="패스워드" required="true" %}
@@ -111,7 +113,7 @@
     "id": 1,
     "name": '채널 이름',
     "role": "onwer" | "admin" | "user",
-    "env": "public" | "protected" | "private" | "dm",
+    "mode": "public" | "protected" | "private" | "dm",
     "recentMessage": [{
           id: 1,
           nickname: 'jiyokim',
@@ -267,6 +269,7 @@ socket.on('updateMyChannel', (res)=> {
 ## 채널 입장
 
 * 실패 시 메시지를 구체적으로 변경
+* env 프로퍼티 명을 mode로 변경&#x20;
 * 설명 추가
 
 </details>
