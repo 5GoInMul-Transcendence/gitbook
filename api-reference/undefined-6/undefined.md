@@ -29,7 +29,7 @@ socket.emit('submitMatch', {
 ### 매치 취소
 
 ```jsx
-socket.emit('cancleMatch', (res) => {});
+socket.emit('cancelMatch', (res) => {});
 ```
 
 <details>
