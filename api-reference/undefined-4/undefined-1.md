@@ -22,7 +22,7 @@
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="password" type="비밀번호" required="false" %}
-
+숫자 4자리(0000~9999)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="sessionid" type="세션 ID" required="true" %}

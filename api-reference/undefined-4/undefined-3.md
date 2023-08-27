@@ -52,7 +52,7 @@ pubilc일 때와 다르게 protected는 서버에서 채팅방에 유저를 이 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="password" type="패스워드" required="true" %}
-
+숫자 4자리(0000~9999)
 {% endswagger-parameter %}
 
 {% swagger-parameter required="true" in="path" name="channelid" type="채널 ID" %}
