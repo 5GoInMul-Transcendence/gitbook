@@ -11,7 +11,7 @@
 소켓으로 채널 리스트 env 업데이트
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="env" required="true" type="방 설정" %}
+{% swagger-parameter in="body" name="mode" required="true" type="방 설정" %}
 protected | public
 {% endswagger-parameter %}
 
