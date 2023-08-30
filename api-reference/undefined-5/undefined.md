@@ -1,12 +1,12 @@
 # 채널 정보
 
 {% hint style="info" %}
-최근 업데이트 (8.17)
+최근 업데이트 (8.30)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
-{% swagger method="get" path="/chnnel/setting/:channelid/" baseUrl=" " summary="채널 정보 가져오기" %}
+{% swagger method="get" path="/channel/setting/:channelid/" baseUrl=" " summary="채널 정보 가져오기" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -55,3 +55,11 @@
 {% endswagger %}
 
 Pong 게임 초대에 대한 건 게임 팀에 맞춰 설계하기
+
+<details>
+
+<summary>[08.30] 업데이트</summary>
+
+&#x20;\-채널 정보 가져오기명 API 리소스 오타 수정 chnnel -> channel
+
+</details>
