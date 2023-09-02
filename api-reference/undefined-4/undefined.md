@@ -55,8 +55,8 @@ HTTP/1.1 200 OK
         id: 1,
         name: '채널이름',
         recentMessage: {
-          nickname: 'jiyokim',
-          message: '최근 메시지'
+          nickname: 'jiyokim' | null,
+          message: '최근 메시지' | null,
         }
     } ...,
   ],
