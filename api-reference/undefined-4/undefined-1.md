@@ -22,7 +22,7 @@
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="password" type="비밀번호" required="false" %}
-숫자 4자리(0000~9999)
+문자열 4자리(0000~9999)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="sessionid" type="세션 ID" required="true" %}
@@ -69,5 +69,13 @@
 
 * sessionid가 필요하므로 추가
 * env 프로퍼티 명을 mode로 변경&#x20;
+
+</details>
+
+<details>
+
+<summary>[09.03] 업데이트</summary>
+
+password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다.
 
 </details>

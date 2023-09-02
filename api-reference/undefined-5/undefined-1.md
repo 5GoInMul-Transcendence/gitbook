@@ -16,7 +16,9 @@ protected | public
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="password" type="비밀번호" required="false" %}
+string 4글자
 
+(0000\~9999)
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="성공" %}
@@ -48,3 +50,10 @@ protected | public
 {% endswagger-response %}
 {% endswagger %}
 
+<details>
+
+<summary>0903 Update list</summary>
+
+password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다.
+
+</details>

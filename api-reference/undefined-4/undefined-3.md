@@ -52,7 +52,7 @@ pubilc일 때와 다르게 protected는 서버에서 채팅방에 유저를 이 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="password" type="패스워드" required="true" %}
-숫자 4자리(0000~9999)
+string 4자리(0000~9999)
 {% endswagger-parameter %}
 
 {% swagger-parameter required="true" in="path" name="channelid" type="채널 ID" %}
@@ -280,5 +280,13 @@ socket.on('updateMyChannel', (res)=> {
 
 * parameter에 channelid 누락 수정
 * API resource 오타 수정, channleid => channelid
+
+</details>
+
+<details>
+
+<summary>0903 Update list</summary>
+
+password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다.
 
 </details>
