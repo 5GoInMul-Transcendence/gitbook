@@ -1,7 +1,7 @@
 # 채널 설정
 
 {% hint style="info" %}
-최근 업데이트 (8.17)
+최근 업데이트 (0903)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>채널 설정창</p></figcaption></figure>

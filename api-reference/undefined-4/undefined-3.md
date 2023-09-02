@@ -1,7 +1,7 @@
 # 채널 채팅방
 
 {% hint style="info" %}
-최근 업데이트 (8.24)
+최근 업데이트 (0903)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>채팅 페이지</p></figcaption></figure>

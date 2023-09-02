@@ -1,7 +1,7 @@
 # 채널 만들기
 
 {% hint style="info" %}
-최근 업데이트 (8.24)
+최근 업데이트 (0903)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>채널 생성창</p></figcaption></figure>
