@@ -18,11 +18,11 @@
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="mode" required="true" type="방 설정" %}
-'public' 'protected' | 'private'
+'public' | 'protected' | 'private' | 'dm'
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="password" type="비밀번호" required="false" %}
-문자열 4자리(0000~9999)
+{% swagger-parameter in="body" name="password" type="비밀번호" required="true" %}
+문자열 4자리(0000~9999), 없으면 null 명시하기
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="sessionid" type="세션 ID" required="true" %}
@@ -76,6 +76,8 @@
 
 <summary>[09.03] 업데이트</summary>
 
-password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다.
+* password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다
+* mode에 'dm' 추가
+* 비밀번호가 존재하지 않을 시 null 명시적으로 넣어주기
 
 </details>

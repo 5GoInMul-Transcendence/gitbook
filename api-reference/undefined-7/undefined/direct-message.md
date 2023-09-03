@@ -1,7 +1,7 @@
-# Direct message 보내기
+# \*삭제\*(채널 만들기에 합병)Direct message 보내기
 
 {% hint style="info" %}
-최근 업데이트 (8.24)
+최근 업데이트 (0903)
 {% endhint %}
 
 {% swagger method="post" path="/channel/private" baseUrl=" " summary="채널 만들기" %}
@@ -56,5 +56,13 @@ DM은 "닉네임1, 닉네임2, ..."으로 한다.
 <summary><mark style="color:blue;">[07.26]</mark> 업데이트 내용</summary>
 
 * POST /channel/private에서 sessionid가 필요하므로 추가함
+
+</details>
+
+<details>
+
+<summary>0903 Update list</summary>
+
+* 삭제
 
 </details>

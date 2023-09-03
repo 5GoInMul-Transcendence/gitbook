@@ -188,5 +188,6 @@ socket.on('updateMyChannel', (res)=> {
 <!---->
 
 * /channels/mine, /channels/me, /channels/my 등을 고민했으나 RESTful 한 API 리소스 명은 명사로 해야 한다는 점 등을 고려하여 mine 으로 할 예정이다.
+* 채널을 처음 생성했을 때는 recentMessage 는 없을 것이므로 recentMessage 의 프로퍼티인 nickname 과 message 는 null 을 가진다.
 
 </details>

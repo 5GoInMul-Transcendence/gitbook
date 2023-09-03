@@ -21,9 +21,7 @@
   * [소켓 연결 (chat)](api-reference/undefined-4/chat.md)
   * [채널 리스트](api-reference/undefined-4/undefined.md)
   * [채널 만들기](api-reference/undefined-4/undefined-1.md)
-  * [상대방 프로필](api-reference/undefined-4/undefined-2/README.md)
-    * [Direct message 보내기](api-reference/undefined-4/undefined-2/direct-message.md)
-  * [채널 채팅방](api-reference/undefined-4/undefined-3.md)
+  * [채널 채팅방](api-reference/undefined-4/undefined-2.md)
 * [채널 설정 페이지](api-reference/undefined-5/README.md)
   * [채널 정보](api-reference/undefined-5/undefined.md)
   * [채널 설정](api-reference/undefined-5/undefined-1.md)
@@ -31,6 +29,9 @@
 * [게임 페이지](api-reference/undefined-6/README.md)
   * [매치 페이지](api-reference/undefined-6/undefined.md)
   * [게임](api-reference/undefined-6/undefined-1.md)
+* [휴지통](api-reference/undefined-7/README.md)
+  * [\*삭제\*(채널 만들기에 합병)상대방 프로필](api-reference/undefined-7/undefined/README.md)
+    * [\*삭제\*(채널 만들기에 합병)Direct message 보내기](api-reference/undefined-7/undefined/direct-message.md)
 
 ## FRONT
 
