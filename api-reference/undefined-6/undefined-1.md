@@ -54,7 +54,7 @@ HTTP/1.1 200 OK
 const socket = io('http://localhost:10003/game', {
   transports: ['websocket'],
   auth: {
-	gamekey: 'key'
+	gameKey: 'key'
   }
 });
 ```
