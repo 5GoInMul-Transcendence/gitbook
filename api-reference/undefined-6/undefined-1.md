@@ -131,20 +131,18 @@ socket.emit('updatePaddle', {
 
 ```javascript
 socket.on('updateObject', (res) => {
-	"data":{
-		p1: {
-			x: ,
-			y: ,
-		},
-		p2: {
-			x: ,
-			y: ,
-		},
-		b: {
-			x: ,
-			y:
-		}
+	p1: {
+		x: ,
+		y: ,
 	},
+	p2: {
+		x: ,
+		y: ,
+	},
+	b: {
+		x: ,
+		y:
+	}
 })
 ```
 
@@ -160,15 +158,13 @@ socket.on('updateObject', (res) => {
 
 ```javascript
 socket.on('updateSocre', (res) => {
-	"data":{
-		p1 { 
-			score: ,
-		} ,
-		p2 {
-			score: ,
-		} ,
-		winner: p1 | p2,
-	},
+	p1 { 
+		score: ,
+	} ,
+	p2 {
+		score: ,
+	} ,
+	winner: p1 | p2,
 })
 ```
 
@@ -180,3 +176,18 @@ socket.on('updateSocre', (res) => {
 
 </details>
 
+
+
+<details>
+
+<summary>[09.04] 업데이트</summary>
+
+게임 응답 데이터 포맷이 변경되었습니다.&#x20;
+
+```javascript
+data {p1, p2} -> {p1, p2}
+```
+
+* 랩핑 비용과 네트워크 비용을 줄여 게임 성능을 높이기 위해 data랩핑을 제거하였습니다.
+
+</details>
