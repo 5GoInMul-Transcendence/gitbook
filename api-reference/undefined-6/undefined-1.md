@@ -158,7 +158,7 @@ socket.on('updateObject', (res) => {
 ### 게임 스코어 업데이트
 
 ```javascript
-socket.on('updateSocre', (res) => {
+socket.on('updateScore', (res) => {
 	p1 { 
 		score: ,
 	} ,
@@ -182,12 +182,17 @@ socket.on('updateSocre', (res) => {
 
 <summary>[09.04] 업데이트</summary>
 
-게임 응답 데이터 포맷이 변경되었습니다.&#x20;
+#### 1. 게임 응답 데이터 포맷이 변경되었습니다.&#x20;
 
 ```javascript
 data {p1, p2} -> {p1, p2}
 ```
 
 * 랩핑 비용과 네트워크 비용을 줄여 게임 성능을 높이기 위해 data랩핑을 제거하였습니다.
+
+#### 2. 게임 종료시 받는 응답 데이터가 수정되었습니다.
+
+* updateScore 이벤트에서 'winner'를 반환하지 않습니다.
+* gameInfo 이벤트에서 status === end일 때, message프로퍼티를 추가로 반환합니다.
 
 </details>
