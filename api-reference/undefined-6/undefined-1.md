@@ -80,6 +80,7 @@ socket.emit('readyGame', ());
 ```javascript
 socket.on('infoGame', (res) => {
   status: standby | play | end
+  message: 'player1 승리' (end일 때 전송되는 프로퍼티)
 });
 ```
 
@@ -164,7 +165,6 @@ socket.on('updateSocre', (res) => {
 	p2 {
 		score: ,
 	} ,
-	winner: p1 | p2,
 })
 ```
 
