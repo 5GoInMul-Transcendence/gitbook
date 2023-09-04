@@ -182,7 +182,7 @@ socket.on('updateScore', (res) => {
 
 <summary>[09.04] 업데이트</summary>
 
-#### 1. 게임 응답 데이터 포맷이 변경되었습니다.&#x20;
+#### 1. 기본 응답 데이터 포맷이 변경되었습니다.&#x20;
 
 ```javascript
 data {p1, p2} -> {p1, p2}
