@@ -44,7 +44,7 @@
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/channel/:channelid/password" baseUrl=" " summary="채널 비밀번호 인증" %}
+{% swagger method="post" path="/channel/:channelid/password" baseUrl=" " summary="채널 비밀번호 인증 및 입장" %}
 {% swagger-description %}
 pubilc일 때와 다르게 protected는 서버에서 채팅방에 유저를 이 때 넣어준다.
 
