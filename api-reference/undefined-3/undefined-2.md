@@ -132,14 +132,57 @@ HTTP/1.1 200 OK
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="put" path="/me/image" baseUrl=" " summary="이미지 수정 (향후 수정)" %}
+{% swagger method="put" path="/me/avatar" baseUrl=" " summary=" 아바타 수정" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" %}
+{% swagger-parameter in="body" name="file" type="이미지 파일" %}
 
 {% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="성공" %}
+```json
+HTTP/1.1 200 OK
+
+{ 
+  "data" :{},
+  "resStatus" :
+  {
+    "code"   : "0000"
+    "message": ""
+  }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="200: OK" description="실패" %}
+```json
+HTTP/1.1 200 OK
+
+{ 
+  "data" :{},
+  "resStatus" :
+  {
+    "code"   : "0001"
+    "message": "지원하지 않는 이미지 형식입니다."
+  }
+}
+```
+
+```json
+HTTP/1.1 200 OK
+
+{ 
+  "data" :{},
+  "resStatus" :
+  {
+    "code"   : "0001"
+    "message": "파일당 10MB까지 업로드 할 수 있습니다."
+  }
+}
+```
+{% endswagger-response %}
 {% endswagger %}
 
 {% swagger method="post" path="/auth/mail" baseUrl=" " summary="이메일 인증코드 전송" %}
