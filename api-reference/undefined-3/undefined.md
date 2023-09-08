@@ -26,7 +26,7 @@
     "gameRecord":"{
       "win":10
       "loss":10
-      "ladderLevel":10
+      "ladderLevel": '10급'
       "achievement":['10연승'] | null
     }"
   },
