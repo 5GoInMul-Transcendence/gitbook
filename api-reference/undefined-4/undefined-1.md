@@ -1,7 +1,7 @@
 # 채널 만들기
 
 {% hint style="info" %}
-최근 업데이트 (0903)
+최근 업데이트 (0909)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>채널 생성창</p></figcaption></figure>
@@ -27,6 +27,10 @@
 
 {% swagger-parameter in="header" name="sessionid" type="세션 ID" required="true" %}
 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="invitedUserId" type="유저 아이디" required="true" %}
+초대 받을 유저의 id, 숫자, 없으면 null
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="성공" %}
@@ -79,5 +83,13 @@
 * password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다
 * mode에 'dm' 추가
 * 비밀번호가 존재하지 않을 시 null 명시적으로 넣어주기
+
+</details>
+
+<details>
+
+<summary>[0909] Update list</summary>
+
+* Add property of invitedUserId in POST /channel body
 
 </details>
