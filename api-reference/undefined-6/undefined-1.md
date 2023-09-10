@@ -31,7 +31,7 @@ HTTP/1.1 200 OK
      nickname:
      avatar:
     },
-    gamekey: ,
+    gameKey: ,
   },
   "resStatus" :
   {
