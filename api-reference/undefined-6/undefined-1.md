@@ -32,7 +32,6 @@ HTTP/1.1 200 OK
      avatar:
     },
     gamekey: ,
-    gametype: 'classic' | 'paddle' | 'speed',
   },
   "resStatus" :
   {
