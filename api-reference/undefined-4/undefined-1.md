@@ -6,87 +6,6 @@
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>채널 생성창</p></figcaption></figure>
 
-{% swagger method="get" path="/channel/private/check" baseUrl="server" summary="private 채널 생성 유무 확인" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="cookie" name="sessionid" type="세션 id" required="true" %}
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="create channel" %}
-<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
-</strong>
-{ 
-  "data" : "create",
-  "resStatus" :
-  {
-    "code"   : "0000"
-    "message": ""
-  }
-}
-</code></pre>
-{% endswagger-response %}
-
-{% swagger-response status="200: OK" description="enter channel" %}
-```json
-HTTP/1.1 200 OK
-
-{ 
-  "data" : "enter",
-  "resStatus" :
-  {
-    "code"   : "0000"
-    "message": ""
-  }
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% swagger method="get" path="/channel/dm/check" baseUrl="server" summary="DM 채널 생성 유무 확인" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="cookie" name="sessionid" type="세션 id" required="true" %}
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="invitedUserId" type="유저 id" required="true" %}
-초대 받는 유저의 id
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="create channel" %}
-<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
-</strong>
-{ 
-  "data" : "create",
-  "resStatus" :
-  {
-    "code"   : "0000"
-    "message": ""
-  }
-}
-</code></pre>
-{% endswagger-response %}
-
-{% swagger-response status="200: OK" description="enter channel" %}
-<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
-</strong>
-{ 
-  "data" : "enter",
-  "resStatus" :
-  {
-    "code"   : "0000"
-    "message": ""
-  }
-}
-</code></pre>
-{% endswagger-response %}
-{% endswagger %}
-
 {% swagger method="post" path="/channel/public" baseUrl="server" summary="public 채널 만들기" %}
 {% swagger-description %}
 
@@ -245,11 +164,16 @@ HTTP/1.1 200 OK
 <summary>[0910] Update list</summary>
 
 * channel mode 인 public, protected, private, dm 각각의 상황이 매우 다양하다. 때문에 하나의 API 에서 처리하기에 어렵다. 그래서 기존 하나의 생성에서 모드마다 생성 API 를 만들어 나누었다.
-* private 와 dm 채널은 특정 조건으로 한 번만 생성 가능하기 때문에 생성 전 이미 있는 채널인지 확인하는 API 를 추가하였다.
+* private 채널 생성 시도 시 기존에 이미 만들어져 있으면 해당 채널 id 와 name 을 보냄
+* DM 채널 생성 시도 시 자신과 초대 받을 유저가 입장한 DM 채널이 존재할 시 해당 채널 id 와 name 을 보냄
 
 </details>
 
-{% swagger method="post" path="/channel" baseUrl=" " summary="채널 만들기(삭제 예정)" expanded="false" %}
+## 삭제 예정 API
+
+***
+
+{% swagger method="post" path="/channel" baseUrl=" " summary="(삭제 예정)채널 만들기" expanded="false" %}
 {% swagger-description %}
  채팅방 생성 후 바로 입장 처리
 {% endswagger-description %}
@@ -300,6 +224,87 @@ HTTP/1.1 200 OK
   {
     "code"   : "0001"
     "message": "방을 생성할 수 없습니다."
+  }
+}
+</code></pre>
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/channel/private/check" baseUrl="server" summary="(삭제 예정)private 채널 생성 유무 확인" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="cookie" name="sessionid" type="세션 id" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="create channel" %}
+<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
+</strong>
+{ 
+  "data" : "create",
+  "resStatus" :
+  {
+    "code"   : "0000"
+    "message": ""
+  }
+}
+</code></pre>
+{% endswagger-response %}
+
+{% swagger-response status="200: OK" description="enter channel" %}
+```json
+HTTP/1.1 200 OK
+
+{ 
+  "data" : "enter",
+  "resStatus" :
+  {
+    "code"   : "0000"
+    "message": ""
+  }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/channel/dm/check" baseUrl="server" summary="(삭제 예정)DM 채널 생성 유무 확인" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="cookie" name="sessionid" type="세션 id" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="invitedUserId" type="유저 id" required="true" %}
+초대 받는 유저의 id
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="create channel" %}
+<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
+</strong>
+{ 
+  "data" : "create",
+  "resStatus" :
+  {
+    "code"   : "0000"
+    "message": ""
+  }
+}
+</code></pre>
+{% endswagger-response %}
+
+{% swagger-response status="200: OK" description="enter channel" %}
+<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
+</strong>
+{ 
+  "data" : "enter",
+  "resStatus" :
+  {
+    "code"   : "0000"
+    "message": ""
   }
 }
 </code></pre>
