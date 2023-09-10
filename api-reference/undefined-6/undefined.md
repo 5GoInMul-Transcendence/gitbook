@@ -8,7 +8,7 @@
 
 ```javascript
 socket.emit('submitMatch', {
-    gametype: classic | paddle | speed
+    gameMode: classic | goldenpong | speed
 }, (res) => {});
 ```
 
