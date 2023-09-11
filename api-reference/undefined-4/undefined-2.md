@@ -1,7 +1,7 @@
 # 채널 채팅방
 
 {% hint style="info" %}
-최근 업데이트 (0903)
+최근 업데이트 (0912)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>채팅 페이지</p></figcaption></figure>
@@ -49,6 +49,8 @@
 pubilc일 때와 다르게 protected는 서버에서 채팅방에 유저를 이 때 넣어준다.
 
 이는 서버에 비밀번호를 통해 들어오는 유저가 password 인증을 했을 때 인증된 유저를 따로 저장하지 않기 위해서다. 비밀번호 인증만 하고, 방에 들어오지 않는다 가정한다면 이 때 인증 받은 유저는 메모리 상에 계속 쌓일 것이고, 방에 들어가지 않았기 때문에 지울 방법이 없기 때문이다.
+
+첫 입장 시 서버에서 입장만 시켜주지, 실제로는 GET /channel/:channelid API 를 다시 호출해줘야 한다.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="password" type="패스워드" required="true" %}
@@ -64,17 +66,21 @@ string 4자리(0000~9999)
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="성공" %}
-<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
-</strong>
+```json
+HTTP/1.1 200 OK
+
 { 
-  "data" : {},
+  "data" : {
+    "id": 123,
+    "name": "채널 이름"
+  },
   "resStatus" :
   {
     "code"   : "0000"
     "message": ""
   }
 }
-</code></pre>
+```
 {% endswagger-response %}
 
 {% swagger-response status="200: OK" description="실패" %}
@@ -288,5 +294,14 @@ socket.on('updateMyChannel', (res)=> {
 <summary>0903 Update list</summary>
 
 password 가 0, 00, 000, 0000 일 때를 구분하지 못하기 때문에 문자열로 변경한다.
+
+</details>
+
+<details>
+
+<summary>0912 Update list</summary>
+
+* POST /channel/:channelid/password를 protected mode인 채널에 첫 입장 시 호출하면 비밀 번호가 올바를 때 서버 상에서 채널에 입장 시켜준다. 그러나 프론트 상에서는 채널 입장 API 를 다시 호출해줘야 메시지 및 채널 정보를 얻을 수 있다.
+* 때문에 비밀번호 인증 때 채널 생성과 같이 채널의 id와 name 만을 보내주도록 변경 되었다.
 
 </details>
