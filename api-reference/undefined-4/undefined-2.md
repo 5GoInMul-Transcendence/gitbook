@@ -16,10 +16,13 @@
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="성공" %}
-<pre class="language-typescript"><code class="lang-typescript"><strong>HTTP/1.1 200 OK
+<pre class="language-json"><code class="lang-json"><strong>HTTP/1.1 200 OK
 </strong>
 { 
-  "data" : {},
+  "data" : 
+  {
+    "mode": "public" | "protected"
+  },
   "resStatus" :
   {
     "code"   : "0000"
