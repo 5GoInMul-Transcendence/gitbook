@@ -79,7 +79,7 @@ socket.emit('readyGame', ());
 ```javascript
 socket.on('infoGame', (res) => {
   status: standby | play | end
-  message: 'player1 승리' (end일 때 전송되는 프로퍼티)
+  message: '1 |  2' (end일 때 전송되는 프로퍼티)
 });
 ```
 
@@ -114,7 +114,7 @@ socket.emit('startGame');
 
 ```javascript
 socket.emit('updatePaddle', {
-        paddle: keyDown | keyUp,
+        paddle: 0 (keyUp) | 1(keyDown),
     }
 })
 ```
