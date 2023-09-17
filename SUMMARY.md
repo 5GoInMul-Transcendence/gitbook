@@ -17,6 +17,7 @@
   * [마이 프로필](api-reference/undefined-3/undefined.md)
   * [상대방 프로필](api-reference/undefined-3/undefined-1.md)
   * [내 프로필 수정](api-reference/undefined-3/undefined-2.md)
+  * [게임 히스토리](api-reference/undefined-3/undefined-3.md)
 * [채팅 페이지](api-reference/undefined-4/README.md)
   * [소켓 연결 (chat)](api-reference/undefined-4/chat.md)
   * [채널 리스트](api-reference/undefined-4/undefined.md)
