@@ -17,7 +17,7 @@ HTTP/1.1 200 OK
   "data": [
     {
       "gameId": number;
-      "createdTime": string;
+      "createdDate": string;
       "player1": {
         "nickname": string;
         "avatar": string;
