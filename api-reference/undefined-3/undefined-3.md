@@ -1,6 +1,6 @@
 # 게임 히스토리
 
-{% swagger method="get" path="/history/:nickname" baseUrl=" " summary="" %}
+{% swagger method="get" path="/history/:nickname" baseUrl=" " summary="게임 히스토리 조회" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -39,3 +39,4 @@ HTTP/1.1 200 OK
 ```
 {% endswagger-response %}
 {% endswagger %}
+
