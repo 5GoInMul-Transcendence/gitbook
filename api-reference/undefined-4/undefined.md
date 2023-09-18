@@ -97,7 +97,9 @@ socket.on('addAllChannel', (res)=> {
 ```javascript
 socket.on('deleteAllChannel', (res)=> {  
   { 
-    "data": 1,
+    "data": {
+      "id": 1,
+    },
     "resStatus":
     {
       "code"   : "0000"
@@ -110,7 +112,7 @@ socket.on('deleteAllChannel', (res)=> {
 ### :back: My 채널 추가
 
 ```javascript
-socket.on('addAllChannel', (res)=> {  
+socket.on('addMyChannel', (res)=> {  
   { 
     "data" : {
           id: 1,
@@ -128,9 +130,11 @@ socket.on('addAllChannel', (res)=> {
 ### :back: My 채널 삭제
 
 ```javascript
-socket.on('deleteAllChannel', (res)=> {  
+socket.on('deleteMyChannel', (res)=> {  
   { 
-    "data": 1,
+    "data": {
+      id: 1,
+    },
     "resStatus":
     {
       "code"   : "0000"
