@@ -122,6 +122,18 @@ HTTP/1.1 200 OK
 
 
 
+> SOCKET API
+
+### 매치 신청
+
+```javascript
+socket.emit('inviteMatch', {
+	inviteUserId: number,
+})
+```
+
+
+
 > API 업데이트 노트
 
 <details>
