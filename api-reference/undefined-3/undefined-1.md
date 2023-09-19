@@ -68,15 +68,15 @@ HTTP/1.1 200 OK
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/user/:nickname/block" baseUrl=" " summary="상대방 차단" %}
+{% swagger method="post" path="/channel/block" baseUrl=" " summary="상대방 차단" %}
 {% swagger-description %}
-채널 삭제에 대한 소켓 로직과 같음
+상대방 차단시 DM을 차단합니다.
+
+이미 DM이 있을 경우 서로 채널을 나가게 됩니다.
 {% endswagger-description %}
 
-{% swagger-parameter type="닉네임" in="path" name="nickname" required="true" %}
-데이터 범위 : 영문자, 숫자
+{% swagger-parameter type="유저 ID" in="path" name="blockUserId" required="true" %}
 
-문자열 길이 : 2이상 12이하
 {% endswagger-parameter %}
 
 {% swagger-parameter in="cookie" name="sessionid" type="세션 ID" required="true" %}
@@ -88,13 +88,7 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 
 { 
-  "data":{
-    "id":1,
-    "nickname": 'donghyuk',
-    "avatar": '793506111257096042754805',
-    "isFriend": true|false,
-    "isBlock" : true|false,
-  },
+  "data":{},
   "resStatus" :
   {
     "code"   : "0000"
