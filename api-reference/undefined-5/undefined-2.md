@@ -22,6 +22,7 @@
   "data" : {
     "admin": true | false,
     "mute": true | false,
+    "ban": true | false
   },
   "resStatus" :
   {
