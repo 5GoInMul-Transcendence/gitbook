@@ -124,9 +124,10 @@ HTTP/1.1 200 OK
     "role": "onwer" | "admin" | "user",
     "mode": "public" | "protected" | "private" | "dm",
     "recentMessage": [{
-          "id": 1, message id
-          "nickname": 'jiyokim',
+          "id": 1 (message id),
           "content": '최근 메시지',
+          "nickname": 'jiyokim',
+          "avatar": "/avatar/$(userId)"
     }, ...], 
   },
   "resStatus" :
@@ -243,16 +244,17 @@ HTTP/1.1 200 OK
 
 메시지 받기 (채널리스트, 채널방 메시지)
 
-```javascript
+```json
 socket.on('updateMyChannel', (res)=> {  
   { 
     "data" : {
-        id: 1,
-        name: '채널이름',
-        recentMessage: {
-          id: 1,
-          nickname: 'jiyokim',
-          content: '최근 메시지'
+        "id": 1,
+        "name": '채널이름',
+        "recentMessage": {
+          "id": message id,
+          "content": '최근 메시지',
+          "nickname": 'jiyokim',
+          "avatar": "/avatar/$(userId)"
         },
       },
     ],

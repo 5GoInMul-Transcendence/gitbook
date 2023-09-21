@@ -24,7 +24,7 @@
       {
         "id": 1,
         "nickname": "jayoon",
-        "avatar": adsf,
+        "avatar": "/avatar/userId",
         "role": "onwer" | "admin" | "user",
       },
       ...

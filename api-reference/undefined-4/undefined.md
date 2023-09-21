@@ -55,9 +55,10 @@ HTTP/1.1 200 OK
         "id": channel id(number),
         "name": '채널이름',
         "recentMessage": {
-          "id": message id(number), If message is empty, it is -1(number),
-          "nickname": 'jiyokim' | '',
-          "content": '최근 메시지' | '',
+          "id": message id(number) | -1(number),
+          "content": '최근 메시지' | "",
+          "nickname": 'jiyokim' | "",
+          "avatar": "/avatar/userId" | ""
         }
     } ...,
   ],
