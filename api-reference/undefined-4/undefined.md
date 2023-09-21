@@ -46,17 +46,18 @@ HTTP/1.1 200 OK
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="성공" %}
-```javascript
+```json
 HTTP/1.1 200 OK
 
 { 
   "data" : [
     {
-        id: 1,
-        name: '채널이름',
-        recentMessage: {
-          nickname: 'jiyokim' | null,
-          message: '최근 메시지' | null,
+        "id": 1,
+        "name": '채널이름',
+        "recentMessage": {
+          "id": message id | '',
+          "nickname": 'jiyokim' | '',
+          "content": '최근 메시지' | '',
         }
     } ...,
   ],

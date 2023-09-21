@@ -124,9 +124,9 @@ HTTP/1.1 200 OK
     "role": "onwer" | "admin" | "user",
     "mode": "public" | "protected" | "private" | "dm",
     "recentMessage": [{
-          id: 1,
-          nickname: 'jiyokim',
-          content: '최근 메시지',
+          "id": 1, message id
+          "nickname": 'jiyokim',
+          "content": '최근 메시지',
     }, ...], 
   },
   "resStatus" :
