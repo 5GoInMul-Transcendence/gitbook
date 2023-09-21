@@ -58,7 +58,7 @@
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="status" type="변경될 상태" required="true" %}
-"admin" | "mute" | "ban" | "kink"
+"admin" | "mute" | "ban" | "kick"
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="sessionid" type="세션 ID" required="true" %}
