@@ -21,7 +21,8 @@
 { 
   "data" : 
   {
-    "mode": "public" | "protected"
+    "mode": "public" | "protected",
+    "isBan": true | false
   },
   "resStatus" :
   {
