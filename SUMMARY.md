@@ -33,30 +33,3 @@
 * [휴지통](api-reference/undefined-7/README.md)
   * [\*삭제\*(채널 만들기에 합병)상대방 프로필](api-reference/undefined-7/undefined/README.md)
     * [\*삭제\*(채널 만들기에 합병)Direct message 보내기](api-reference/undefined-7/undefined/direct-message.md)
-
-## FRONT
-
-* [개발환경 구축](front/undefined.md)
-
-## Back
-
-* [기술 스택](back/undefined.md)
-* [개발환경 구축](back/undefined-1/README.md)
-  * [01. Node](back/undefined-1/01.-node/README.md)
-    * [01.1. Node 설치](back/undefined-1/01.-node/01.1.-node.md)
-  * [02. 데이터베이스 (PostgreSQL)](back/undefined-1/02.-postgresql/README.md)
-    * [02.1 PostgreSQL 설치하기](back/undefined-1/02.-postgresql/02.1-postgresql.md)
-    * [02.2 계정 생성하기](back/undefined-1/02.-postgresql/02.2.md)
-    * [02.3 데이터베이스 생성하기](back/undefined-1/02.-postgresql/02.3.md)
-    * [02.4 스키마 생성하기](back/undefined-1/02.-postgresql/02.4.md)
-  * [03. Docker](back/undefined-1/03.-docker/README.md)
-    * [03.1 설치](back/undefined-1/03.-docker/03.1.md)
-    * [03.2 패키지 구조](back/undefined-1/03.-docker/03.2.md)
-* [기능 구현](back/undefined-2/README.md)
-  * [휴대폰 인증 (SENS)](back/undefined-2/sens/README.md)
-    * [SENS 기능 소개](back/undefined-2/sens/sens.md)
-    * [SENS 이용 요금](back/undefined-2/sens/sens-1.md)
-    * [SENS 기능 테스트](back/undefined-2/sens/sens-2/README.md)
-      * [01. 사전 준비](back/undefined-2/sens/sens-2/01..md)
-      * [02. SMS 전송 테스트](back/undefined-2/sens/sens-2/02.-sms.md)
-  * [이메일 인증](back/undefined-2/undefined.md)
